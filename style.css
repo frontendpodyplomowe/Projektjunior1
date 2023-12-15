@@ -82,9 +82,9 @@ div {
     margin: 0;
   }
 
-  .box12 {
+  /* .box12 {
     max-width: 50%;
-  }
+  } */
 
   .firstLine{
       display: flex;
