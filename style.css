@@ -2,26 +2,33 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  background-color: khaki;
 }
 
 .box {
   width: 750px;
   height: 500px;
-  border: 5px solid blue;
-  padding: 50px;
+  border: 10px solid blue;
+  padding: 60px;
   background-color: yellow;
   margin: 10px;
+  display: inline-block;
 }
+
+/* p {
+  font-size: 22px;
+  text-decoration: underline;
+} */
 
 p:first-child {
   text-align: left;
   width: 400px;
+  background-color: grey;
 }
 
-div{
-    background-color: darkgoldenrod;
+div {
+  background-color: darkgoldenrod;
 }
-
 
 /* CSS rules - @media queries */
 /* obsłuzyc podstawowe break points */
@@ -35,34 +42,59 @@ div{
     display: none;
   }
 }
+/* 1 rem = 16px domyslna wysokosc fontu */
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .shortText {
+    background-color: red;
+    font-size: 2rem;
+  }
 
-@media all and (min-width: 576px) {
-    .shortText{
-        background-color: red;
-    }
+  .longText {
+    background-color: blue;
+    font-size: 1.5rem;
+  }
 
-    .longText{
-        background-color: blue;
-    }
+  .boxes {
+    width: 100%;
+  }
 
-    .boxes{
-        width: 100%;
-    }
-
-    .firstLine{
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .box{
-        display: inline-block;
-    }
+  .firstLine {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
-/* 
-@media screen and (min-width:768px) {
-    .shortText, .longText{
-        background-color: darkgreen;
-        color: gold;
-    }    
-    
-} */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .shortText,
+  .longText {
+    background-color: darkgreen;
+    color: gold;
+  }
+
+  .box {
+    border-color: red;
+    background-color: greenyellow;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .box {
+    margin: 0;
+  }
+
+  .box12 {
+    max-width: 50%;
+  }
+
+  .firstLine{
+      display: flex;
+  }
+
+  .box p {
+    width: 100px;
+  }
+
+  .box3 {
+    width: 100%;
+  }
+}
