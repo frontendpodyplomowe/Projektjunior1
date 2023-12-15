@@ -1,0 +1,68 @@
+/* CSS rules - general */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 750px;
+  height: 500px;
+  border: 5px solid blue;
+  padding: 50px;
+  background-color: yellow;
+  margin: 10px;
+}
+
+p:first-child {
+  text-align: left;
+  width: 400px;
+}
+
+div{
+    background-color: darkgoldenrod;
+}
+
+
+/* CSS rules - @media queries */
+/* obsłuzyc podstawowe break points */
+
+/* 576 768 992 1200 px */
+
+@media only screen and (max-width: 575px) {
+  .shortText,
+  .longText,
+  div {
+    display: none;
+  }
+}
+
+@media all and (min-width: 576px) {
+    .shortText{
+        background-color: red;
+    }
+
+    .longText{
+        background-color: blue;
+    }
+
+    .boxes{
+        width: 100%;
+    }
+
+    .firstLine{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .box{
+        display: inline-block;
+    }
+}
+/* 
+@media screen and (min-width:768px) {
+    .shortText, .longText{
+        background-color: darkgreen;
+        color: gold;
+    }    
+    
+} */
