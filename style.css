@@ -33,9 +33,34 @@ div {
   background-color: darkgoldenrod;
 }
 
+/* Jednostki względne  */
 
 .relativeFonts{
     background-color: inherit;
+}
+
+/* 1 rem = 16px domyslnie */
+
+/* nadpisanie wysokosci roota co do fontu */
+html{
+  font-size: 10px;
+}
+
+
+.parent{
+  font-size: 1.5em; 
+}
+
+.child1{
+  font-size: 2em; 
+}
+
+.child2{
+  font-size: 0.75em;
+}
+
+.secondChild1{
+  font-size: 3em;
 }
 
 
