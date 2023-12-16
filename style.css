@@ -20,22 +20,31 @@
   text-decoration: underline;
 } */
 
+
+
 p:first-child {
   text-align: left;
   width: 400px;
   background-color: grey;
 }
 
+
 div {
   background-color: darkgoldenrod;
 }
+
+
+.relativeFonts{
+    background-color: inherit;
+}
+
 
 /* CSS rules - @media queries */
 /* obsłuzyc podstawowe break points */
 
 /* 576 768 992 1200 px */
 
-@media only screen and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .shortText,
   .longText,
   div {
@@ -43,7 +52,7 @@ div {
   }
 }
 /* 1 rem = 16px domyslna wysokosc fontu */
-@media all and (min-width: 576px) and (max-width: 767px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
   .shortText {
     background-color: red;
     font-size: 2rem;
@@ -86,8 +95,9 @@ div {
     max-width: 50%;
   } */
 
-  .firstLine{
-      display: flex;
+  .firstLine,
+  .lastLine {
+    display: flex;
   }
 
   .box p {
@@ -96,5 +106,45 @@ div {
 
   .box3 {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* oprogramuj style w tym przedziale aby w pierwszej linii były trzy boxy równej szerokości a drugiej dwa tez równej szerkości */
+
+  @media screen and (min-width: 1200px) {
+    /* First line */
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .firstLine {
+      display: flex;
+      width: 66.6%;
+      margin: 0;
+      padding: 0;
+    }
+    .firstLine > .box {
+      margin: 0;
+    }
+    .box3 {
+      width: 33.3%;
+      margin: 0;
+    }
+    .firstLine > * > p,
+    .box3 > p {
+      width: 100px;
+    }
+
+    /* Second line */
+    .lastLine {
+      display: flex;
+      width: 100%;
+    }
+
+    .lastLine > .box {
+      margin: 0;
+      min-width: 50%;
+    }
   }
 }
