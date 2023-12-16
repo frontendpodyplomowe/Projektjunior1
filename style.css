@@ -77,7 +77,7 @@ html{
   }
 }
 /* 1 rem = 16px domyslna wysokosc fontu */
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media screen and  {
   .shortText {
     background-color: red;
     font-size: 2rem;
