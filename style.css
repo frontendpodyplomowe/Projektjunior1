@@ -138,42 +138,65 @@ img {
 	}
 }
 
+/* oprogramuj style w tym przedziale aby w pierwszej linii były trzy boxy równej szerokości a drugiej dwa tez równej szerkości */
+
 @media screen and (min-width: 1200px) {
-	/* oprogramuj style w tym przedziale aby w pierwszej linii były trzy boxy równej szerokości a drugiej dwa tez równej szerkości */
+	
+  /* First line */
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .firstLine {
+    display: flex;
+    width: 66.6%;
+    margin: 0;
+    padding: 0;
+  }
+  .firstLine > .box {
+    margin: 0;
+  }
+  .box3 {
+    width: 33.3%;
+    margin: 0;
+    animation-name: change;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    transition: 4s;
+  }
 
-	@media screen and (min-width: 1200px) {
-		/* First line */
-		.boxes {
-			display: flex;
-			flex-wrap: wrap;
-		}
-		.firstLine {
-			display: flex;
-			width: 66.6%;
-			margin: 0;
-			padding: 0;
-		}
-		.firstLine > .box {
-			margin: 0;
-		}
-		.box3 {
-			width: 33.3%;
-			margin: 0;
-		}
-		.firstLine > * > p,
-		.box3 > p {
-			width: 100px;
-		}
+  .box3:hover {
 
-		/* Second line */
-		.lastLine {
-			display: flex;
-			width: 100%;
-		}
+  transform: rotateY(180deg);
+  }
 
-		.lastLine > .box {
-			margin: 0;
-			min-width: 50%;
-		}
-	}
+  .firstLine > * > p,
+  .box3 > p {
+    width: 100px;
+  }
+
+  /* Second line */
+  .lastLine {
+    display: flex;
+    width: 100%;
+  }
+
+  .lastLine > .box {
+    margin: 0;
+    min-width: 50%;
+  }
+}
+@keyframes change {
+  0% {
+    background-image: url("https://media.istockphoto.com/id/1357890877/pl/wektor/uroczy-taniec-%C5%9Bwi%C4%99tego-miko%C5%82aja-%C5%9Bwi%C4%85teczna-ilustracja-wektorowa.jpg?s=612x612&w=0&k=20&c=T154IbUdpjXwal18wTsFPFZ47gBUJc5bYT84sIj6f9I=");
+  }
+  25% {
+    background-image: url("https://s9.tvp.pl/images2/9/9/9/uid_9993b5abff84f08a8d1f6a1a583b60ed1608719985432_width_900_play_0_pos_0_gs_0_height_506.jpg");
+  }
+  75% {
+    background-image: url("https://marketplace.canva.com/EAFVZkS4VJ0/1/0/1600w/canva-święta-życzenia-kartka-choinka-szyszka-zielony-post-na-facebooka-e-7fPwodS-c.jpg");
+  }
+  100% {
+    background-image: url("https://media.istockphoto.com/id/1357890877/pl/wektor/uroczy-taniec-%C5%9Bwi%C4%99tego-miko%C5%82aja-%C5%9Bwi%C4%85teczna-ilustracja-wektorowa.jpg?s=612x612&w=0&k=20&c=T154IbUdpjXwal18wTsFPFZ47gBUJc5bYT84sIj6f9I=");
+  }
 }
