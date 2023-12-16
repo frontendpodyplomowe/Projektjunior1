@@ -63,6 +63,34 @@ html{
   font-size: 3em;
 }
 
+.formularzDoMikolaja {
+  background-color: rgb(246, 180, 180);
+  border-radius: 15px;
+  padding: 10px;
+  border: 2px solid red;
+}
+
+.formularzDoMikolaja > * {
+  background-color: inherit;
+  margin: 8px 0;
+  border-radius: 5px;
+}
+#imie, #nazwisko, #wiek {
+  background-color: white;
+}
+#list {
+  width: 95%;
+  min-height: 100px;
+  background-color: white;
+}
+#przeslijList {
+  background-color: rgb(113, 28, 28);
+  color: aliceblue;
+}
+#przeslijList:hover {
+  background-color: rgb(235, 216, 216);
+}
+
 
 /* CSS rules - @media queries */
 /* obsłuzyc podstawowe break points */
